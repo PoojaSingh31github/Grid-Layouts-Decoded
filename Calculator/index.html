@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Calculator</title>
+    <style>
+      .body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .heading {
+        color: #347e81;
+        margin-top: 150px;
+        text-align: center;
+      }
+      .Calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .Calculator input {
+        width: 200px;
+        border-radius: 5px;
+        border: none;
+        padding: 17px;
+        margin-bottom: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 50px);
+        gap: 10px;
+      }
+      .buttons > div {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        height: 50px;
+        width: 50px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+      .red {
+        background-color: red;
+        color: white;
+      }
+      .black {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Masai Calculator</h1>
+    <div class="body">
+      <div class="Calculator">
+        <input type="text" />
+        <div class="buttons">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div class="black">+</div>
+
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div class="black">-</div>
+
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div class="black">*</div>
+
+          <div class="red">c</div>
+          <div>0</div>
+          <div class="black">=</div>
+          <div class="black">%</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

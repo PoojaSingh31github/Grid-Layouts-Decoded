@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      .main_div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "top1 side "
+          "bottom1 bottom2 ";
+        gap: 10px;
+      }
+
+      .main_div > div {
+        height: 200px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
+
+      .grid1 {
+        grid-area: top1;
+        background-color: blue;
+      }
+
+      .grid3 {
+        grid-area: side;
+        background-color: lightpink;
+      }
+
+      .grid4 {
+        grid-area: bottom1;
+        background-color: orange;
+      }
+
+      .grid5 {
+        grid-area: bottom2;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="grid1">1</div>
+      <div class="grid4">4</div>
+      <div class="grid5">5</div>
+      <div class="grid3">6</div>
+    </div>
+  </body>
+</html>

@@ -1,142 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Flex</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .Main{
-            border: 2px dashed black;
-
-            padding: 10px;
-            background-color: yellow;
-            
-        }
-        .img_div{
-            border: 1px dashed black;
-            margin: 10px 0;
-            height: 150px;
-            width: 200px;
-            background-color: rgb(38, 140, 223);
-        }
-        .inner_div{
-            background-color: rgb(219, 217, 217);
-            border: 2px solid black;
-            margin: 10px 2px;
-            display: flex;
-
-        }
-        .inner_div > div{
-            margin:10px;
-
-        }
-        .inner_div h1,p,a{
-            border: 1px dashed black;
-            margin: 10px;
-        }
-
-        @media only screen and (max-width: 760px){
-            .Main{
-                display: grid;
-                grid-template-columns: repeat(2,1f);
-            }
-            .img_div{
-                width: 200px;
-            }
-
-            
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="Most_outter">
-        <div class="Main">
-            <div class="inner_div">
-                <div  class="img_div">
-                    
-                </div>
-                <div>
-                    <h1 >Title</h1>
-                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="" >Read More</a>
-                </div>
-            </div>
-             <div class="inner_div">
-                <div class="img_div">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-            <div class="inner_div">
-                <div class="img_div">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-             <div class="inner_div">
-                <div class="img_div">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-            <div class="inner_div">
-                <div class="img_div">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-             <div class="inner_div">
-                <div class="img_div">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-            <div class="inner_div">
-                <div class="img_div">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-             <div class="inner_div">
-                <div class="img_div">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h1>Title</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-        </div>
+      <div class="Main" id="main_div"></div>
     </div>
-</body>
+  </body>
+
+  <script>
+    const data = document.getElementById("main_div");
+
+    for (let i = 1; i < 24; i++) {
+      const value = document.createElement("div");
+      value.className = "inner_div";
+
+      value.innerHTML = `
+            
+                <div class="grid_div">
+                  <h1 class="heading1">Title</h1>
+                  <div class="img_div">
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <h1 class="heading2">Title</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum expedita adipisci cupiditate aliquid, repellendus debitis possimus modi quidem. Vitae voluptate similique architecto accusantium inventore necessitatibus deleniti veritatis ut, nihil placeat?</p>
+                    <a href="">Read More</a>
+                </div>
+                  
+                  </div>
+           
+        `;
+      data.appendChild(value);
+    }
+  </script>
 </html>

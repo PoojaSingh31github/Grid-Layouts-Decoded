@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Co-Founder & CEO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main_div" id="card_grid">
+
+
+    </div>
+  </body>
+  <script>
+    const card_grid = document.getElementById("card_grid");
+
+    data = [
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+      {
+        Banner:
+          "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name: "Vijay Shekhar Sharma",
+        desgnation: "Founder & CEO",
+        logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+      },
+    ];
+
+    data.forEach((item) => {
+      const card = document.createElement("div");
+      card.className= "inner_div"; 
+
+      card.innerHTML = `
+           <div class="main_img"> <img src=${item.Banner} alt=""></div>
+            <h2>${item.name}</h2>
+            <p>${item.desgnation}</p>
+<div class="logo_div"> <img src=${item.logo} alt="" class="logo_img" ></div>
+           
+    
+        `;
+
+        card_grid.appendChild(card)
+    });
+  </script>
+</html>

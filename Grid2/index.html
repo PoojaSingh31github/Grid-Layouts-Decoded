@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grid Layout</title>
-  <style>
-    .main_div {
-        background-color: rgb(159, 79, 159);
-        padding: 10px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr; 
-      grid-template-areas: 
-        "top1 top1 side"
-        "bottom1 bottom2 side";
-      gap: 10px; 
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      .main_div {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+        background-color: #fff;
+        height: 400px;
+      }
 
-    .main_div > div {
-      height: 200px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-    }
+      .main_div > div {
+        height: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
 
-    .grid1 {
-      grid-area: top1;
-      background-color: blue;
-    }
+      .grid1 {
+        grid-column: 1 / 3;
+        grid-row: 1;
 
-    .grid3 {
-      grid-area: side;
-      background-color: lightpink;
-    }
+        background-color: blue;
+      }
 
-    .grid4 {
-      grid-area: bottom1;
-      background-color: orange;
-    }
+      .grid3 {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        background-color: lightpink;
+      }
 
-    .grid5 {
-      grid-area: bottom2;
-      background-color: brown;
-    }
-  </style>
-</head>
-<body>
-  <div class="main_div">
-    <div class="grid1">1</div>
-    <div class="grid4">4</div>
-    <div class="grid5">5</div>
-    <div class="grid3">6</div>
-  </div>
-</body>
+      .grid4 {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: orange;
+      }
+
+      .grid5 {
+        grid-column: 2;
+        grid-row: 2;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="grid1">1</div>
+      <div class="grid4">4</div>
+      <div class="grid5">5</div>
+      <div class="grid3">6</div>
+    </div>
+  </body>
 </html>

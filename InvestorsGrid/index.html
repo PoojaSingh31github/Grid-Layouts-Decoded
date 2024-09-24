@@ -7,10 +7,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main_div" id="card_grid">
-
-
+    <div class="upper-div">
+      <img
+        src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg"
+        alt=""
+      />
+      <img
+        src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg"
+        alt=""
+      />
+      <img
+        src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg"
+        alt=""
+      />
     </div>
+    <h2 class="main_heading">Strategic Investors</h2>
+
+    <div class="main_div" id="card_grid"></div>
   </body>
   <script>
     const card_grid = document.getElementById("card_grid");
@@ -97,7 +110,7 @@
 
     data.forEach((item) => {
       const card = document.createElement("div");
-      card.className= "inner_div"; 
+      card.className = "inner_div";
 
       card.innerHTML = `
            <div class="main_img"> <img src=${item.Banner} alt=""></div>
@@ -108,7 +121,7 @@
     
         `;
 
-        card_grid.appendChild(card)
+      card_grid.appendChild(card);
     });
   </script>
 </html>
